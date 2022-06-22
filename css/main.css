@@ -362,7 +362,6 @@ button {
 .social-net {
   display: flex;
 }
-
 .social-net__link {
   display: inline-flex;
   align-items: center;
@@ -371,23 +370,15 @@ button {
   height: 44px;
   border-radius: 50%;
   background-color: transparent;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .social-net__item:not(:last-child) {
   margin-right: 10px;
 }
-
 .social-net__icon {
   display: block;
   fill: #afb1b8;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-net__link:hover,
@@ -662,6 +653,101 @@ header {
   border: 1px solid #2196f3;
 }
 
+.ftr {
+  padding: 60px 0;
+  background-color: #2f303a;
+}
+.ftr__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.ftr__contacts-container {
+  margin-top: 20px;
+}
+.ftr__contacts-link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ftr__contacts-item + .ftr__contacts-item {
+  margin-top: 9px;
+}
+
+.ftr__contacts-link:hover,
+.ftr__contacts-link:focus {
+  color: #2196f3;
+}
+
+.ftr__contacts-link--address {
+  color: #fff;
+}
+
+.ftr__soc-container {
+  margin-left: 70px;
+}
+
+.ftr__title {
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #fff;
+}
+
+.ftr .social-net__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ftr .social-net__icon {
+  fill: #fff;
+}
+
+.social-net__link:hover,
+.social-net__link:focus {
+  background-color: #2196f3;
+}
+
+.ftr__subscribe {
+  margin-left: 93px;
+}
+
+.ftr__subscribe-block {
+  display: flex;
+}
+
+.ftr__subscribe--input-field {
+  padding: 15px;
+  width: 100%;
+  min-width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.ftr__subscribe .button {
+  position: relative;
+  margin-left: 12px;
+  min-width: 200px;
+}
+
+.ftr__subscribe .button:active {
+  background: #188ce8;
+}
+
+.subs-icon {
+  position: absolute;
+  bottom: 50%;
+  right: 28px;
+  transform: translateY(50%);
+  fill: #fff;
+}
+
 /* Button */
 .button {
   display: flex;
@@ -705,115 +791,6 @@ header {
 }
 
 /* Footer */
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.footer {
-  padding: 60px 0;
-  background-color: #2f303a;
-}
-
-.footer .ftr-item + .ftr-item {
-  margin-top: 9px;
-}
-
-.ftr-contacts .ftr-address {
-  margin-top: 20px;
-}
-
-.adress {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #fff;
-}
-
-.adress:hover,
-.adress:focus {
-  color: #2196f3;
-}
-
-.ftr-contacts-item {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
-}
-
-.ftr-contacts-item:hover,
-.ftr-contacts-item:focus {
-  color: #2196f3;
-}
-
-.ftr-soc {
-  margin-left: 70px;
-}
-
-.ftr-title {
-  margin: 0 0 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 1.14;
-  color: #fff;
-}
-
-.footer .social-net__link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer .social-net__icon {
-  fill: #fff;
-}
-
-.social-net__link:hover,
-.social-net__link:focus {
-  background-color: #2196f3;
-}
-
-.ftr-subscribe {
-  margin-left: 93px;
-}
-
-.ftr-subsribe-block {
-  display: flex;
-}
-
-.ftr-subscribe .input-field {
-  padding: 15px;
-  width: 100%;
-  min-width: 358px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  color: #fff;
-  background-color: transparent;
-}
-
-.ftr-subscribe .button {
-  position: relative;
-  margin-left: 12px;
-  min-width: 200px;
-}
-
-.ftr-subscribe .button:active {
-  background: #188ce8;
-}
-
-.icon-subs {
-  position: absolute;
-  bottom: 50%;
-  right: 28px;
-  transform: translateY(50%);
-  fill: #fff;
-}
-
 /* ----------------------- */
 /* СТИЛІ для Portfolio */
 .portfolio .section-title {

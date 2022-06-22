@@ -363,32 +363,35 @@
     </section>
 
     <!--Footer-->
-    <footer class="footer">
-      <div class="container">
-        <div class="ftr-contacts">
-          <a href="./index.html"
+    <footer class="ftr">
+      <div class="ftr__container container">
+        <div class="ftr__wrapper">
+          <a href="./index.html" class="ftr__logo"
             ><span class="logo--blue">Web</span><span class="logo--white">Studio</span></a
           >
 
-          <address class="ftr-address">
-            <ul class="list">
-              <li class="ftr-item">
-                <a href="https://goo.gl/maps/LaYwSsmEuTicvmq38" target="_blank" class="adress"
+          <address class="ftr__contacts-container">
+            <ul class="ftr__contacts-list list">
+              <li class="ftr__contacts-item">
+                <a
+                  href="https://goo.gl/maps/LaYwSsmEuTicvmq38"
+                  target="_blank"
+                  class="ftr__contacts-link ftr__contacts-link--address"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="ftr-item">
-                <a href="mailto:info@example.com" class="ftr-contacts-item">info@example.com</a>
+              <li class="ftr__contacts-item">
+                <a href="mailto:info@example.com" class="ftr__contacts-link">info@example.com</a>
               </li>
-              <li class="ftr-item">
-                <a href="tel:+380991111111" class="ftr-contacts-item">+38 099 111 11 11</a>
+              <li class="ftr__contacts-item">
+                <a href="tel:+380991111111" class="ftr__contacts-link">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
 
-        <div class="ftr-soc">
-          <h3 class="ftr-title">Приєднуйтесь</h3>
+        <div class="ftr__soc-container">
+          <h3 class="ftr__title">Приєднуйтесь</h3>
           <ul class="social-net list">
             <li class="social-net__item">
               <a href="" class="social-net__link">
@@ -417,15 +420,21 @@
           </ul>
         </div>
 
-        <div class="ftr-subscribe">
-          <h3 class="ftr-title">Підписатись на розсилку</h3>
-          <div class="ftr-subsribe-block">
+        <div class="ftr__subscribe">
+          <h3 class="ftr__title">Підписатись на розсилку</h3>
+          <div class="ftr__subscribe-block">
             <label>
-              <input class="input-field" type="email" name="email" placeholder="Email" required />
+              <input
+                class="ftr__subscribe--input-field input-field"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
             </label>
             <button class="button">
               Підписатись
-              <svg class="icon-subs" width="24" height="24">
+              <svg class="subs-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
