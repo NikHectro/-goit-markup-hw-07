@@ -295,6 +295,19 @@ button {
   font-family: inherit;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -453,13 +466,7 @@ header {
   color: #ffffff;
 }
 
-.features .section-title,
-.portfolio .section-title {
-  display: none;
-  /* temporary solution*/
-}
-
-.features .title {
+.features__title {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
@@ -467,28 +474,20 @@ header {
   text-transform: uppercase;
   color: #212121;
 }
-
-.feature-text {
+.features__text {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
 }
-
-.features .list {
+.features__list {
   display: flex;
 }
-
-.feature-block {
+.features__card {
   /* width: 270px; */
   width: calc((100% - 90px) / 4);
 }
-
-.feature-block + .feature-block {
-  margin-left: 30px;
-}
-
-.icon-block {
+.features__icon-cont {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -498,10 +497,31 @@ header {
   margin-bottom: 30px;
   background-color: #f5f4fa;
 }
-
-.icon-feature {
+.features__icon {
   width: 70px;
   height: 70px;
+}
+
+.features__card + .features__card {
+  margin-left: 30px;
+}
+
+/* Features */
+/* Areas */
+.areas {
+  padding-top: 0;
+}
+
+.areas .section-title {
+  margin-bottom: 50px;
+}
+
+.areas .list {
+  display: flex;
+}
+
+.areas .list-item + .list-item {
+  margin-left: 30px;
 }
 
 .thumb {
@@ -526,24 +546,6 @@ header {
   text-transform: uppercase;
   color: #fff;
   background: rgba(47, 48, 58, 0.8);
-}
-
-/* Features */
-/* Areas */
-.areas {
-  padding-top: 0;
-}
-
-.areas .section-title {
-  margin-bottom: 50px;
-}
-
-.areas .list {
-  display: flex;
-}
-
-.areas .list-item + .list-item {
-  margin-left: 30px;
 }
 
 /* Team */
@@ -846,6 +848,11 @@ header {
 
 /* ----------------------- */
 /* СТИЛІ для Portfolio */
+.portfolio .section-title {
+  display: none;
+  /* temporary solution - use .visually-hidden*/
+}
+
 .portfolio .filters {
   display: flex;
   justify-content: center;
