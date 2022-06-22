@@ -4,53 +4,8 @@
 @import './components/header';
 @import './components/hero';
 @import './components/features';
+@import './components/areas';
 
-/* Features */
-
-/* Areas */
-
-.areas {
-  padding-top: 0;
-}
-
-.areas .section-title {
-  margin-bottom: 50px;
-}
-
-.areas .list {
-  display: flex;
-}
-
-.areas .list-item + .list-item {
-  margin-left: 30px;
-}
-
-
-.thumb {
-    position: relative;
-    /* overflow: hidden; */
-}
-
-.thumb>.label {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 70px;
-    margin: 0;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: $contrast-color;
-    background: rgba(47, 48, 58, 0.8);
-}
 
 /* Team */
 .team .section-title {
