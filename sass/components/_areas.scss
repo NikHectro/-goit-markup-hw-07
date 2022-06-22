@@ -1,14 +1,9 @@
-
 .areas {
     padding-top: 0;
 
     &__list {
     display: flex;
     }
-}
-
-.areas .section-title {
-    margin-bottom: 50px;
 }
 
 .areas__item + .areas__item {

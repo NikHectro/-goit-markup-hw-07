@@ -44,7 +44,7 @@ button {
 }
 
 .section-title {
-    margin: 0 auto;
+    margin: 0 auto 50px;
 
     font-weight: 700;
     font-size: 36px;
@@ -78,4 +78,55 @@ button {
     &:hover {
         color: $accent-color;
     }
+}
+
+.img-block {
+  display: block;
+}
+
+/* Social-net icons */
+.social-net {
+    display: flex;
+}
+
+.social-net__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.social-net__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-net__icon {
+  display: block;
+
+  fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.social-net__link:hover,
+.social-net__link:focus {
+  outline: transparent;
+  background-color: $accent-color;
+}
+
+.social-net__link:hover .social-net__icon,
+.social-net__link:focus .social-net__icon {
+  fill: #ffffff;
 }

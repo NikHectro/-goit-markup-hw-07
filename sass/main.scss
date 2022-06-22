@@ -5,114 +5,12 @@
 @import './components/hero';
 @import './components/features';
 @import './components/areas';
+@import './components/team';
 
 
 /* Team */
-.team .section-title {
-  margin-bottom: 50px;
-}
 
-/* Could be unify or merge?  */
 
-.section.team {
-  margin-bottom: 0;
-  padding: 94px 0;
-
-  background-color: #f5f4fa;
-}
-
-.employee-desc {
-  padding: 30px;
-  /* border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; - Костиль якщо не викор overflow: hidden; в .element*/
-
-  background-color: $primary-bgc;
-}
-
-.team .list {
-  display: flex;
-}
-
-.element + .element {
-  margin-left: 30px;
-}
-
-.element {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.name {
-  margin-top: 0;
-  margin-bottom: 10px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  color: $title-text-color;
-}
-
-.profession {
-  margin-top: 0;
-  margin-bottom: 16;
-
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-}
-
-/* Social-net icons */
-.social-net {
-  display: flex;
-}
-
-.soc-box {
-  border-radius: 50%;
-}
-
-.soc-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: transparent;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
-}
-
-.soc-box:not(:last-child) {
-  margin-right: 10px;
-}
-
-.soc-icon {
-  display: block;
-
-  fill: #afb1b8;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
-}
-
-.soc-link:hover,
-.soc-link:focus {
-  outline: transparent;
-  background-color: $accent-color;
-}
-
-.soc-link:hover .soc-icon,
-.soc-link:focus .soc-icon {
-  fill: #ffffff;
-}
 
 /* Button */
 .button {
@@ -185,6 +83,10 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
+}
+
+.element + .element {
+    margin-left: 30px;
 }
 
 .clients .element {
@@ -277,16 +179,16 @@
   color: $contrast-color;
 }
 
-.footer .soc-link {
+.footer .social-net__link {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .soc-icon {
+.footer .social-net__icon {
   fill: $contrast-color;
 }
 
-.soc-link:hover,
-.soc-link:focus {
+.social-net__link:hover,
+.social-net__link:focus {
   background-color: $accent-color;
 }
 
@@ -388,9 +290,6 @@
   letter-spacing: 0.06em;
 }
 
-.img-block {
-  display: block;
-}
 
 .portf-overlay {
   position: relative;

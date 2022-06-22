@@ -325,7 +325,7 @@ button {
 }
 
 .section-title {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -352,6 +352,53 @@ button {
 }
 .logo--white:hover {
   color: #2196f3;
+}
+
+.img-block {
+  display: block;
+}
+
+/* Social-net icons */
+.social-net {
+  display: flex;
+}
+
+.social-net__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.social-net__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-net__icon {
+  display: block;
+  fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.social-net__link:hover,
+.social-net__link:focus {
+  outline: transparent;
+  background-color: #2196f3;
+}
+
+.social-net__link:hover .social-net__icon,
+.social-net__link:focus .social-net__icon {
+  fill: #ffffff;
 }
 
 header {
@@ -513,10 +560,6 @@ header {
   display: flex;
 }
 
-.areas .section-title {
-  margin-bottom: 50px;
-}
-
 .areas__item + .areas__item {
   margin-left: 30px;
 }
@@ -544,39 +587,31 @@ header {
   background: rgba(47, 48, 58, 0.8);
 }
 
-/* Team */
-.team .section-title {
-  margin-bottom: 50px;
-}
-
-/* Could be unify or merge?  */
-.section.team {
-  margin-bottom: 0;
-  padding: 94px 0;
+.team {
   background-color: #f5f4fa;
 }
 
-.employee-desc {
+.employee__desc {
   padding: 30px;
   /* border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px; - Костиль якщо не викор overflow: hidden; в .element*/
   background-color: #ffffff;
 }
 
-.team .list {
+.team__list {
   display: flex;
 }
 
-.element + .element {
+.employee + .employee {
   margin-left: 30px;
 }
 
-.element {
+.employee {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.name {
+.employee__name {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
@@ -586,7 +621,7 @@ header {
   color: #212121;
 }
 
-.profession {
+.employee__profession {
   margin-top: 0;
   margin-bottom: 16;
   font-size: 16px;
@@ -594,53 +629,7 @@ header {
   text-align: center;
 }
 
-/* Social-net icons */
-.social-net {
-  display: flex;
-}
-
-.soc-box {
-  border-radius: 50%;
-}
-
-.soc-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: transparent;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
-}
-
-.soc-box:not(:last-child) {
-  margin-right: 10px;
-}
-
-.soc-icon {
-  display: block;
-  fill: #afb1b8;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0ms;
-}
-
-.soc-link:hover,
-.soc-link:focus {
-  outline: transparent;
-  background-color: #2196f3;
-}
-
-.soc-link:hover .soc-icon,
-.soc-link:focus .soc-icon {
-  fill: #ffffff;
-}
-
+/* Team */
 /* Button */
 .button {
   display: flex;
@@ -705,6 +694,10 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
+}
+
+.element + .element {
+  margin-left: 30px;
 }
 
 .clients .element {
@@ -792,16 +785,16 @@ header {
   color: #fff;
 }
 
-.footer .soc-link {
+.footer .social-net__link {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .soc-icon {
+.footer .social-net__icon {
   fill: #fff;
 }
 
-.soc-link:hover,
-.soc-link:focus {
+.social-net__link:hover,
+.social-net__link:focus {
   background-color: #2196f3;
 }
 
@@ -894,10 +887,6 @@ header {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
-
-.img-block {
-  display: block;
 }
 
 .portf-overlay {
