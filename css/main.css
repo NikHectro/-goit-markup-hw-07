@@ -590,14 +590,6 @@ header {
 .team {
   background-color: #f5f4fa;
 }
-
-.employee__desc {
-  padding: 30px;
-  /* border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; - Костиль якщо не викор overflow: hidden; в .element*/
-  background-color: #ffffff;
-}
-
 .team__list {
   display: flex;
 }
@@ -610,7 +602,10 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
+.employee__desc {
+  padding: 30px;
+  background-color: #ffffff;
+}
 .employee__name {
   margin-top: 0;
   margin-bottom: 10px;
@@ -620,7 +615,6 @@ header {
   text-align: center;
   color: #212121;
 }
-
 .employee__profession {
   margin-top: 0;
   margin-bottom: 16;
